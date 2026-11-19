@@ -315,7 +315,20 @@ a { color: inherit; }
   overflow: hidden;
   transition: transform .15s ease, box-shadow .15s ease;
 }
-.cup-promo-card:hover { transform: translate(-2px, -2px); box-shadow: 10px 10px 0 var(--ink); }
+.cup-promo-open {
+  display: inline-block;
+  margin: 14px 0 8px;
+  padding: 2px 12px;
+  background: var(--ink);
+  color: var(--white);
+  border-radius: 999px;
+  font-size: .9375rem;
+  font-weight: 900;
+  letter-spacing: .06em;
+}
+.cup-promo-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 0 0 14px; }
+.cup-promo-signup { background: var(--ink); color: var(--white); }
+.cup-promo-signup:hover { background: var(--ink); color: var(--white); }
 .cup-promo-text p { margin: 0; }
 .cup-promo-title { margin: 14px auto 6px; }
 .cup-promo-title img { width: min(100%, 440px); margin: 0 auto; }
@@ -945,6 +958,7 @@ a { color: inherit; }
   .cup-promo-title { grid-area: title; margin: 10px 0 0; }
   .cup-promo-title img { margin: 0; }
   .cup-promo-info { grid-area: info; padding-left: 28px; border-left: 2.5px dashed var(--ink); }
+  .cup-promo-actions { justify-content: flex-start; }
   .cup-promo-meta > span:first-child { white-space: nowrap; font-size: clamp(1rem, 1.3vw, 1.1875rem); }
   .cup-promo-cat { width: 100%; margin: 0; align-self: end; }
   .info-layout { grid-template-columns: 1.1fr .9fr; gap: 40px; }
