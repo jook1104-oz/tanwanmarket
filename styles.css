@@ -331,11 +331,16 @@ a { color: inherit; }
   letter-spacing: .06em;
 }
 .cup-promo-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 0 0 14px; }
-/* 黑底按鈕用米白陰影，避免和黑色陰影黏成一團 */
-.cup-promo-signup { background: var(--ink); color: var(--white); box-shadow: 4px 4px 0 var(--white); }
-.cup-promo-signup:hover { background: var(--ink); color: var(--white); box-shadow: 6px 6px 0 var(--white); }
-.cup-promo-signup:active { box-shadow: 1px 1px 0 var(--white); }
+/* 黑底按鈕加米白外框，和黑色陰影分開，不會黏成一團 */
+.cup-promo-signup { background: var(--ink); color: var(--white); border-color: var(--white); }
+.cup-promo-signup:hover { background: var(--ink); color: var(--white); }
 .cup-promo-text p { margin: 0; }
+/* 要寫在上一行之後且選擇器更具體，不然間距會被歸零 */
+.cup-promo-text .cup-promo-open { margin: 16px 0 20px; }
+@media (max-width: 639px) {
+  .cup-promo-actions { flex-direction: column; align-items: center; gap: 16px; margin-bottom: 20px; }
+  .cup-promo-actions .btn { width: min(100%, 280px); }
+}
 .cup-promo-title { margin: 14px auto 6px; }
 .cup-promo-title img { width: min(100%, 440px); margin: 0 auto; }
 .cup-promo-meta { font-weight: 900; font-size: 1.1875rem; line-height: 1.5; }
